@@ -1,0 +1,82 @@
+touch ~/.no_auto_tmux
+apt-get update && apt-get dist-upgrade -y && apt clean all
+apt-get install -y curl wget supervisor git clang-6.0 ninja-build protobuf-compiler libprotobuf-dev python3-pip && apt-get clean all
+apt-get install -y qt5-default libblas-dev libopenblas-base libopenblas-dev unzip
+pip3 install meson
+git clone -b release/0.22 --recurse-submodules https://github.com/LeelaChessZero/lc0.git
+git clone --recurse-submodules https://github.com/LeelaChessZero/lc0.git
+cd lc0/
+./build.sh
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1sLFGu0pnw7PHrRmyGbIVFHIjbB4X-qNp' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1sLFGu0pnw7PHrRmyGbIVFHIjbB4X-qNp" -O ls-n11.pb.gz && rm -rf /tmp/cookies.txt
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1sLFGu0pnw7PHrRmyGbIVFHIjbB4X-qNp' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1sLFGu0pnw7PHrRmyGbIVFHIjbB4X-qNp" -O ls-n11-1.pb.gz && rm -rf /tmp/cookies.txt
+https://drive.google.com/open?id=1DAeuMzfS-cjjgcaFHQmehpSoQhQ5iF4Z
+https://drive.google.com/open?id=1sLFGu0pnw7PHrRmyGbIVFHIjbB4X-qNp
+mkdir data
+mv ls-n11.pb.gz data/
+
+cd ~
+git clone https://github.com/manyoso/allie
+cd allie/
+qmake
+make
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1sLFGu0pnw7PHrRmyGbIVFHIjbB4X-qNp' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1sLFGu0pnw7PHrRmyGbIVFHIjbB4X-qNp" -O ls-n11.pb.gz && rm -rf /tmp/cookies.txt
+mv ls-n11.pb.gz bin/
+
+cd ~
+wget https://stockfishchess.org/files/stockfish-10-linux.zip
+unzip stockfish-10-linux.zip
+cd stockfish-10-linux
+chmod 755 Linux/stockfish-10-bmi2
+
+
+https://drive.google.com/open?id=1sLFGu0pnw7PHrRmyGbIVFHIjbB4X-qNp
+ls
+cat README.md
+gcc --help
+cat allie.pro
+cat src/src.pro
+cd ..
+git clone git://code.qt.io/qt/qt5.git
+cd qt5/
+git checkout 5.12
+perl --help
+perl -v
+perl init-repository
+ls
+ls qttools/
+ls qttools/src/
+make install
+../qt5/configure -developer-build -opensource -nomake examples -nomake tests
+
+      42  ../qt5/configure -developer-build -opensource -nomake examples -nomake tests
+   43  apt-get build-dep qt5-default
+   44  apt-get install build-dep qt5-default
+   45  apt-get install qt5-default
+   46  cd ../allie/
+   47  ls
+   48  qmake
+   49  ls
+   50  cat Makefile
+   51  qmake allie.pro
+   52  ls
+   53  make
+   54  ls lib/neural/
+   55  vim Makefile
+   56  apt-get install vim
+   57  vim Makefile
+   58  ls
+   59  vim lib/lib.pro
+   60  qmake --help
+   61  make -j
+   62  make clean
+   63  make
+   64  make clean
+   65  make --help
+   66  vim Makefile
+   67  apt-get install libblas-dev
+   68  make
+   69  make clean && make
+   70  apt-get install libopenblas-base
+   71  apt-get install libopenblas-dev
+   72  make clean && make
+   75  cp ~/lc0/data/ls-n11.pb.gz bin/
